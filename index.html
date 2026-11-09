@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Hocbigg - Religious Studies</title>
+  <meta name="description" content="Path to a free self-taught education in Religious Studies.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/religious-studies/">
+  <meta property="og:title" content="Hocbigg - Religious Studies">
+  <meta property="og:description" content="Path to a free self-taught education in Religious Studies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/religious-studies/">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/religious-studies/">Religious Studies</a></li>
+      <li><a href="/religious-studies/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="https://github.com/hocbigg/religious-studies" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+<header class="page-header">
+  <img src="/images/logo.png" alt="Hocbigg logo">
+  <h1>Hocbigg - Religious Studies</h1>
+  <p class="page-subtitle">Path to a free self-taught education in Religious Studies.</p>
+  <p class="last-updated"><small>Last updated on: <time datetime="2026-10-08">2026-10-08</time></small></p>
+</header>
+<h2 id="introduction">Introduction</h2>
+<p>The academic study of religion is fundamentally distinct from theology. Where theology is typically confessional—working from within a tradition to articulate and defend religious truth—Religious Studies approaches religion as a human, cultural, and historical phenomenon. Rather than asking which religious beliefs are true or false, the discipline examines what religion is, how religious traditions evolve, how sacred texts are constructed and read, and how beliefs, rituals, and symbols shape human societies. It draws on history, sociology, anthropology, literary theory, and philosophy to understand one of the most powerful forces in human civilization.</p>
+<p>This curriculum is designed for self-directed learners starting from absolute scratch. It assumes no background in theology, ancient languages, or philosophy, and requires neither personal religious affiliation nor personal secularism. What it does require is methodological neutrality: the willingness to bracket personal convictions, investigate traditions from both insider and outsider perspectives, and treat religious beliefs as complex, internally diverse historical developments rather than monolithic, static systems.</p>
+<p>The core curriculum is structured around four subjects that should be studied sequentially:</p>
+<p>You should begin with <strong>Introduction to Religious Studies</strong> to acquire the field's basic analytical vocabulary, establish the distinction between theology and academic study, and learn how scholars debate what "religion" actually means. From there, move to the <strong>World Religions Survey</strong> to build an empirical foundation across major global traditions. Having factual knowledge of these traditions is essential before moving to <strong>Theories of Religion</strong>, which steps back from individual traditions to examine the classic sociological, psychological, and anthropological frameworks that scholars use to explain religious phenomena. Finally, <strong>Sacred Texts and Their Interpretation</strong> provides deep-dive methodological training in historical criticism and hermeneutics, showing how scholars analyze ancient scriptures as historical literature.</p>
+<p>This guide covers only the foundational core that every student of the discipline needs. It deliberately excludes specialized regional histories, sectarian subfields, and advanced research methodologies. Once you have built this baseline, you can specialize in distinct subdisciplines—such as religion and ecology, peacebuilding, or the cognitive science of religion—on the <a href="advanced_topics.html">Advanced Topics</a> page.</p>
+<h2 id="curriculum">Curriculum</h2>
+<h3 id="introduction-to-religious-studies">Introduction to Religious Studies</h3>
+<p>Examines the category of religion in human culture, the distinction between confessional theology and academic study, and core methodological challenges such as the insider/outsider problem.</p>
+<p><a href="https://pll.harvard.edu/course/religious-literacy-traditions-and-scriptures" target="_blank" rel="noopener noreferrer">Religious Literacy: Traditions and Scriptures (Harvard University / edX)</a> - a structured video-based introduction built around three core analytical principles: internal diversity, historical evolution, and cultural embeddedness.</p>
+<p><a href="https://books.google.com/books?isbn=9781032190471" target="_blank" rel="noopener noreferrer">A Critical Introduction to the Study of Religion (Craig Martin, Routledge)</a> - the standard foundational textbook on methodology, examining social constructionism, ideology critique, and the politics of defining religion; use this as your primary reading companion alongside either video course.</p>
+<p><a href="https://www.youtube.com/playlist?list=PLdLiRaajwSXTiyMxz9Imt9TBZhwCPk7k_" target="_blank" rel="noopener noreferrer">REL 100: Introduction to Religion (Missouri State University, YouTube)</a> - a full-semester university lecture series covering introductory definitions, ritual practices, and academic methods, serving as a traditional classroom alternative to the Harvard edX course.</p>
+<h3 id="world-religions-survey">World Religions Survey</h3>
+<p>Surveys the historical origins, core doctrines, and contemporary practices of major living traditions—including Hinduism, Buddhism, Judaism, Christianity, and Islam—with emphasis on their internal pluralism.</p>
+<p><a href="https://books.google.com/books?isbn=9780521637480" target="_blank" rel="noopener noreferrer">The World's Religions (Ninian Smart, Cambridge University Press)</a> - the standard academic survey textbook organized around Smart's seven dimensions of religion (ritual, experiential, narrative, doctrinal, ethical, social, and material).</p>
+<p><a href="https://books.google.com/books?isbn=9780061763489" target="_blank" rel="noopener noreferrer">The World's Religions (Huston Smith, HarperOne)</a> - an accessible alternative to Smart's textbook that emphasizes the internal, philosophical, and experiential perspectives of each tradition in vivid prose.</p>
+<p><a href="https://www.edx.org/xseries/harvardx-world-religions-through-scriptures" target="_blank" rel="noopener noreferrer">World Religions Through Their Scriptures (HarvardX on edX)</a> - a modular multi-course series exploring traditions through their primary writings, designed as a structured multimedia companion to either textbook.</p>
+<h3 id="theories-of-religion">Theories of Religion</h3>
+<p>Explores the foundational sociological, psychological, anthropological, and phenomenological frameworks formulated to explain the origins, functions, and meaning of religious phenomena.</p>
+<p><a href="https://books.google.com/books?isbn=9780190935085" target="_blank" rel="noopener noreferrer">Ten Theories of Religion (Daniel L. Pals, Oxford University Press)</a> - the canonical introductory textbook that systematically breaks down the arguments, historical contexts, and key criticisms of major theorists from Tylor and Freud to Durkheim, Eliade, and Geertz; begin here to establish your theoretical framework.</p>
+<p><a href="https://archive.org/details/elementaryformso0000emil" target="_blank" rel="noopener noreferrer">The Elementary Forms of the Religious Life (Émile Durkheim, trans. Joseph Ward Swain, Internet Archive)</a> - Durkheim's seminal 1912 text introducing the division between sacred and profane and the concept of collective effervescence; read this primary source alongside the Durkheim chapter in Pals.</p>
+<p><a href="https://archive.org/details/The-Sacred-And-The-Profane" target="_blank" rel="noopener noreferrer">The Sacred and the Profane (Mircea Eliade, Internet Archive)</a> - a classic phenomenological investigation of sacred space, sacred time, and mythic cosmos; serves as a direct conceptual counterpoint to Durkheim's social reductionism.</p>
+<h3 id="sacred-texts-and-their-interpretation">Sacred Texts and Their Interpretation</h3>
+<p>Introduces historical-critical, literary, and comparative methodologies for interpreting sacred literature within its historical environments rather than as dogmatic authority.</p>
+<p><a href="https://oyc.yale.edu/religious-studies/rlst-145" target="_blank" rel="noopener noreferrer">Introduction to the Old Testament / Hebrew Bible (Christine Hayes, Open Yale Courses)</a> - a complete 24-lecture university course demonstrating source criticism, archaeological context, and redaction history across ancient Israelite literature.</p>
+<p><a href="https://oyc.yale.edu/religious-studies/rlst-152" target="_blank" rel="noopener noreferrer">Introduction to the New Testament History and Literature (Dale B. Martin, Open Yale Courses)</a> - a complementary lecture series focusing on early Christian texts within the Greco-Roman world; study this alongside or after Hayes to observe how historical-critical methods apply to emerging traditions.</p>
+<p><a href="https://www.edx.org/learn/buddhism/harvard-university-buddhism-through-its-scriptures" target="_blank" rel="noopener noreferrer">Buddhism Through Its Scriptures (HarvardX on edX)</a> - a self-paced course examining how sacred texts function in a non-Western tradition, providing an essential comparative case study after the biblical criticism courses.</p>
+    </article>
+  </main>
+
+</body>
+</html>

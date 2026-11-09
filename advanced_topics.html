@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Advanced Topics in Religious Studies</title>
+  <meta name="description" content="Advanced Topics in Religious Studies curriculum by hocbigg.">
+  <meta name="author" content="hocbigg">
+
+  <link rel="canonical" href="https://hocbigg.github.io/religious-studies/advanced_topics.html">
+  <meta property="og:title" content="Advanced Topics in Religious Studies">
+  <meta property="og:description" content="Advanced Topics in Religious Studies curriculum by hocbigg.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hocbigg.github.io/religious-studies/advanced_topics.html">
+  <link rel="icon" href="https://hocbigg.github.io/images/favicon.ico">
+
+  <style>
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #595959;
+  --border: #e0e0e0;
+  --th-bg: #f6f8fa;
+  --code-bg: #f4f4f4;
+  --link: #0969da;
+  --focus-ring: #0969da;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --fg: #e6edf3;
+    --muted: #8b949e;
+    --border: #30363d;
+    --th-bg: #161b22;
+    --code-bg: #161b22;
+    --link: #58a6ff;
+    --focus-ring: #58a6ff;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.5rem auto;
+  max-width: 60rem;
+  padding: 0 1rem 3.5rem;
+  background-color: var(--bg);
+  color: var(--fg);
+  font: 1.15rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Cú pháp hiện đại thay thế cho word-wrap */
+  overflow-wrap: break-word;
+}
+
+.site-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem 1.25rem;
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover, 
+nav a:focus-visible {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+nav .nav-brand {
+  color: var(--fg);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-150%);
+  left: 1rem;
+  background: var(--fg);
+  color: var(--bg);
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(1rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+p, ul, ol, blockquote, table {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+li > ul,
+li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:has(img) {
+  text-decoration: none;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header .page-subtitle {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header img {
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+th {
+  background-color: var(--th-bg);
+  font-weight: 600;
+}
+
+blockquote {
+  margin-inline: 0;
+  border-left: 4px solid var(--border);
+  padding-left: 1rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    color: #000;
+    background: #fff;
+  }
+  .skip-link, nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="https://hocbigg.github.io/" class="nav-brand">Hocbigg</a></li>
+      <li><a href="/religious-studies/">Religious Studies</a></li>
+      <li><a href="/religious-studies/advanced_topics.html">Advanced Topics</a></li>
+      <li><a href="https://github.com/hocbigg/religious-studies" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article>
+
+<h1 id="advanced-topics-in-religious-studies">Advanced Topics in Religious Studies</h1>
+<p>Learners who have completed the core undergraduate curriculum should select one or two specialization tracks aligned with their research or professional interests; there is no expectation to study all tracks.</p>
+<ul>
+<li><strong>Comparative Theology &amp; Interreligious Dialogue</strong>: Examines advanced theological methods for crossing religious borders, typologies of religious pluralism, and collaborative scriptural hermeneutics.</li>
+<li><strong>Religion, Conflict &amp; Peacebuilding</strong>: Investigates how religious convictions drive political violence while exploring practical frameworks for conflict analysis, peacebuilding, and reconciliation.</li>
+<li><strong>Religion &amp; Ecology</strong>: Analyzes how world religions and indigenous cosmologies interpret the natural world, critique ecological degradation, and mobilize environmental action.</li>
+<li><strong>Cognitive Science of Religion</strong>: Explores the evolutionary mechanisms, cognitive constraints, and psychological architectures that generate religious concepts and ritual forms.</li>
+<li><strong>Sociology of Religion &amp; Modernity</strong>: Investigates debates over secularization, religious marketplace dynamics, and the embodied practices of lived religion in everyday life.</li>
+<li><strong>New Religious Movements &amp; Digital Religion</strong>: Evaluates 20th- and 21st-century religious innovations, "cult" controversies, and the mediation of religious rituals and authority through digital technologies and artificial intelligence.</li>
+</ul>
+<h2 id="comparative-theology-interreligious-dialogue">Comparative Theology &amp; Interreligious Dialogue</h2>
+<p>Explores advanced theological methods for crossing religious boundaries, theological models of religious diversity, and collaborative practices of scriptural interpretation.</p>
+<p>Comparative Theology Method: <a href="https://books.google.com/books?isbn=9781405179737" target="_blank" rel="noopener noreferrer">Comparative Theology: Deep Learning Across Religious Borders (Francis X. Clooney, Wiley-Blackwell)</a> - sets out the defining methodology of the subfield, demonstrating through close Hindu-Christian textual readings how crossing religious borders reflexively illuminates and deepens a scholar's home tradition.</p>
+<p>Comparative Theology Method: <a href="https://www.youtube.com/watch?v=6_ybUhRON68" target="_blank" rel="noopener noreferrer">Why Comparative Theology Works Interreligiously (Francis X. Clooney, YouTube)</a> - a university lecture providing the foundational rationale and textual case studies for comparative theological inquiry.</p>
+<p>Theology of Religious Pluralism: <a href="https://books.google.com/books?isbn=9781570754197" target="_blank" rel="noopener noreferrer">Introducing Theologies of Religions (Paul F. Knitter, Orbis Books)</a> - maps the four primary theological models—Replacement, Fulfillment, Mutuality, and Acceptance—used by scholars to interpret conflicting truth claims across global faiths.</p>
+<p>Collaborative Interfaith Hermeneutics: <a href="https://www.youtube.com/watch?v=PoXbrpSvhWo" target="_blank" rel="noopener noreferrer">Scriptural Reasoning: A How-To Guide (Faculty of Divinity, University of Cambridge / YouTube)</a> - demonstrates the practice of small-group interfaith text study developed at Cambridge, where Jewish, Christian, and Muslim readers interpret scriptures together without seeking doctrinal consensus.</p>
+<p>Interreligious Dialogue in Practice: <a href="https://books.google.com/books?isbn=9780195369168" target="_blank" rel="noopener noreferrer">The Im-Possibility of Interreligious Dialogue (Catherine Cornille, Oxford University Press)</a> - analyzes the epistemological conditions and psychological hurdles necessary for constructive engagement across deep theological divisions.</p>
+<h2 id="religion-conflict-peacebuilding">Religion, Conflict &amp; Peacebuilding</h2>
+<p>Investigates the dual capacity of religious traditions to legitimize political violence and mobilize deep resources for nonviolent conflict transformation and reconciliation.</p>
+<p>The Logic of Religious Violence: <a href="https://books.google.com/books?isbn=9780520291355" target="_blank" rel="noopener noreferrer">Terror in the Mind of God: The Global Rise of Religious Violence (Mark Juergensmeyer, University of California Press)</a> - a comparative study examining how concepts of cosmic war and performance violence legitimize extremism across Christian, Islamic, Jewish, Sikh, and Buddhist contexts.</p>
+<p>Applied Conflict Analysis: <a href="https://pll.harvard.edu/course/religion-conflict-and-peace" target="_blank" rel="noopener noreferrer">Religion, Conflict and Peace (Harvard University / edX)</a> - a course analyzing contemporary global hotspots case-by-case, teaching practical frameworks to unpack how religious discourses embed themselves in economics, politics, and civic life.</p>
+<p>The Ambivalence of Religious Militance: <a href="https://books.google.com/books?isbn=9780847685554" target="_blank" rel="noopener noreferrer">The Ambivalence of the Sacred: Religion, Violence, and Reconciliation (R. Scott Appleby, Rowman &amp; Littlefield)</a> - a seminal study explaining why deep religious commitment produces both lethal violence and courageous peacemaking, establishing the conceptual architecture of religious peacebuilding.</p>
+<p>Strategic Peacebuilding and Reconciliation: <a href="https://www.youtube.com/watch?v=0CpyF9rLs1A" target="_blank" rel="noopener noreferrer">Compassionate Presence: Faith-based Peacebuilding in the Face of Violence (John Paul Lederach, UCTV / YouTube)</a> - a masterclass by one of the field's primary theorists exploring the practical arts of mediation, reconciliation, and nonviolent social change in conflict zones.</p>
+<h2 id="religion-ecology">Religion &amp; Ecology</h2>
+<p>Analyzes how world religions and indigenous cosmologies interpret the natural world, critique ecological degradation, and mobilize environmental action.</p>
+<p>Foundations of Religious Ecology: <a href="https://www.coursera.org/learn/intro-religions-ecology" target="_blank" rel="noopener noreferrer">Introduction to Religions &amp; Ecology (Yale University on Coursera)</a> - a university MOOC on the intersection of religious worldviews and ecological crises, designed by Mary Evelyn Tucker and John Grim.</p>
+<p>Global Ecotheology &amp; Integral Ecology: <a href="https://www.vatican.va/content/francesco/en/encyclicals/documents/papa-francesco_20150524_enciclica-laudato-si.html" target="_blank" rel="noopener noreferrer">Laudato si’: On Care for Our Common Home (Pope Francis, The Holy See)</a> - an open-access papal encyclical articulating "integral ecology," uniting environmental science, global economic critique, and spiritual ethics.</p>
+<p>Indigenous Environmental Cosmologies: <a href="https://www.coursera.org/learn/indigenous-religions-ecology" target="_blank" rel="noopener noreferrer">Indigenous Religions &amp; Ecology (Yale University on Coursera)</a> - explores traditional ecological knowledge (TEK), sacred geography, and relational ontologies across indigenous communities globally.</p>
+<p>Religious Environmental Ethics &amp; Activism: <a href="https://books.google.com/books?isbn=9780199917006" target="_blank" rel="noopener noreferrer">Earth-Honoring Faith: Religious Ethics in a New Key (Larry Rasmussen, Oxford University Press)</a> - a comprehensive framework connecting religious moral traditions with ecological resistance, climate justice, and grassroots activism.</p>
+<h2 id="cognitive-science-of-religion">Cognitive Science of Religion</h2>
+<p>Explores the evolutionary mechanisms, cognitive constraints, and psychological architectures that generate religious concepts and ritual forms.</p>
+<p>Evolutionary Origins of Religious Cognition: <a href="https://books.google.com/books?isbn=9780465006960" target="_blank" rel="noopener noreferrer">Religion Explained: The Evolutionary Origins of Religious Thought (Pascal Boyer, Basic Books)</a> - the seminal monograph in cognitive science of religion, detailing how minimally counterintuitive concepts and hyperactive agency detection arise naturally from ordinary mental faculties.</p>
+<p>Cultural Evolution and Prosociality: <a href="https://books.google.com/books?isbn=9780691169743" target="_blank" rel="noopener noreferrer">Big Gods: How Religion Transformed Cooperation and Conflict (Ara Norenzayan, Princeton University Press)</a> - examines how beliefs in omniscient, morally punitive deities facilitated the cultural evolution of large-scale human cooperation and complex anonymous societies.</p>
+<p>Cognitive Theory of Ritual and Memory: <a href="https://books.google.com/books?isbn=9780759106154" target="_blank" rel="noopener noreferrer">Modes of Religiosity: A Cognitive Theory of Religious Transmission (Harvey Whitehouse, AltaMira Press)</a> - formulates the foundational cognitive model of religious transmission, contrasting high-arousal "imagistic" rituals with repetitive "doctrinal" systems and their distinct memory mechanisms.</p>
+<p>Contemporary State and Debates of CSR: <a href="https://www.tandfonline.com/doi/full/10.1080/2153599X.2025.2455410" target="_blank" rel="noopener noreferrer">The cognitive science of religion: past, present, and possible (Cognitive Science of Religion, 2025)</a> - an open-access review analyzing three decades of experimental findings, conceptual debates, and emerging frontiers across the cognitive science of religion.</p>
+<h2 id="sociology-of-religion-modernity">Sociology of Religion &amp; Modernity</h2>
+<p>Investigates debates over secularization, religious marketplace dynamics, and the embodied practices of lived religion in everyday life.</p>
+<p>The Secularization Debate: <a href="https://archive.org/details/godisdeadsecular0000bruc" target="_blank" rel="noopener noreferrer">God is Dead: Secularization in the West (Steve Bruce, Internet Archive)</a> - a systematic defense of the orthodox secularization paradigm, arguing that modernization, structural differentiation, and social rationalization systematically erode religious authority.</p>
+<p>The Global Desecularization Counter-Thesis: <a href="https://books.google.com/books?isbn=9780802846914" target="_blank" rel="noopener noreferrer">The Desecularization of the World: Resurgent Religion and World Politics (Peter L. Berger, Wm. B. Eerdmans)</a> - a collection of essays demonstrating how modernization frequently sparks intense religious vitality and fundamentalist reactions rather than universal secularization.</p>
+<p>Supply-Side and Religious Market Economics: <a href="https://books.google.com/books?isbn=9780520222021" target="_blank" rel="noopener noreferrer">Acts of Faith: Explaining the Human Side of Religion (Rodney Stark &amp; Roger Finke, University of California Press)</a> - introduces rational choice theory and market models to the study of religion, arguing that religious vibrancy is driven by organizational competition in unregulated markets.</p>
+<p>Lived Religion and Everyday Practice: <a href="https://books.google.com/books?isbn=9780195368338" target="_blank" rel="noopener noreferrer">Lived Religion: Faith and Practice in Everyday Life (Meredith B. McGuire, Oxford University Press)</a> - a foundational text that shifts sociological inquiry from institutional dogmas and survey metrics to embodied, informal, and everyday spiritual practices.</p>
+<h2 id="new-religious-movements-digital-religion">New Religious Movements &amp; Digital Religion</h2>
+<p>Evaluates 20th- and 21st-century religious innovations, "cult" controversies, and the mediation of religious rituals and authority through digital technologies and artificial intelligence.</p>
+<p>Typology and Sociology of New Religious Movements: <a href="https://books.google.com/books?isbn=9781032102085" target="_blank" rel="noopener noreferrer">New Religious Movements: The Basics (Joseph P. Laycock, Routledge)</a> - an introduction to the subfield deconstructing the pejorative term "cult" and systematically categorizing prophecy, charismatic leadership, and group formation.</p>
+<p>Conversion Dynamics and the Brainwashing Debate: <a href="https://books.google.com/books?isbn=9780631132479" target="_blank" rel="noopener noreferrer">The Making of a Moonie: Choice or Brainwashing? (Eileen Barker, Blackwell)</a> - the classic empirical study that challenged anti-cult brainwashing theories through rigorous fieldwork, establishing modern sociological standards for researching alternative movements.</p>
+<p>Violence and Charismatic Breakdown: <a href="https://books.google.com/books?isbn=9780521668989" target="_blank" rel="noopener noreferrer">Cults, Religion, and Violence (David G. Bromley &amp; J. Gordon Melton, eds., Cambridge University Press)</a> - investigates why certain alternative groups experience violent collapses through the interaction of internal apocalyptic ideologies and external societal hostility.</p>
+<p>Digital Religion and Networked Faith: <a href="https://books.google.com/books?isbn=9780367528096" target="_blank" rel="noopener noreferrer">Digital Religion: Understanding Religious Practice in Digital Media (Heidi A. Campbell &amp; Ruth Tsuria, eds., Routledge)</a> - the standard survey examining how digital media platforms reshape ritual participation, religious authority, and communal identity across global traditions.</p>
+<p>Artificial Intelligence and Cyber-Theology: <a href="https://www.youtube.com/watch?v=fagR0pVk-tg" target="_blank" rel="noopener noreferrer">The AI Entanglement: Religion, Technology, and Humanity (Beth Singler, AI and Faith / YouTube)</a> - an expert lecture examining the theological, anthropological, and ethical dimensions of artificial intelligence, robotic liturgies, and digital representations of the divine.</p>
+    </article>
+  </main>
+
+</body>
+</html>
